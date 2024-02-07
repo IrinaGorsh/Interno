@@ -2,6 +2,7 @@
   <Header />    
   <BlogPage />
   <ProductDetails />
+  <Categories />  
   <Footer />
   
 </template>
@@ -10,6 +11,7 @@
 import Header from './components/Header.vue';
 import BlogPage from './components/BlogPage.vue';
 import ProductDetails from './components/ProductDetails.vue';
+import Categories from './components/Categories.vue';
 import Footer from './components/Footer.vue';
 
 
@@ -21,6 +23,7 @@ export default {
     Header,
     BlogPage,
     ProductDetails,
+    Categories,    
     Footer
     
   }
