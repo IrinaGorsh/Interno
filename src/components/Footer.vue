@@ -17,12 +17,16 @@
                         
                 </div>
             </div>
-            <div class="footer__menu">
-                <a href="#" class="footer__bold">Pages</a>
-                <a href="#" class="footer__link">Home</a>
+            <ul class="footer__menu">
+                <li class="footer__bold">Pages</li>
+                <li class="footer__link"><router-link to="/" exact>Home</router-link></li>
+                <li class="footer__link"><router-link to="/Project">Project</router-link></li>
+                <li class="footer__link"><router-link to="/Blog">Blog</router-link></li>
+                
+                <!--<a href="#" class="footer__link">Home</a>
                 <a href="#" class="footer__link">Project</a>
-                <a href="#" class="footer__link">Blog</a>
-            </div>
+                <a href="#" class="footer__link">Blog</a> -->
+            </ul>
             <div class="footer__cont">
                 <p class="footer__bold">Contact</p>
                 <div class="contacts">                   

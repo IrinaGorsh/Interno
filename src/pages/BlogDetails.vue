@@ -39,6 +39,15 @@
 <div class="tags__column">
     <h4 class="tags__title">Tags</h4>
     <div class="tags__wrapper">
+        <!--<div class="tag">
+            <a href="#" class="tag__link" @click="select">Kitchen</a>        
+        </div>
+        <div class="tag">
+            <a href="#" class="tag__link" @click="select">Living</a>        
+        </div>
+        <div class="tag">
+            <a href="#" class="tag__link" @click="select">Interior</a>        
+        </div> -->
         <div class="tag">
             <a href="#" class="tag__link" @click="select">Kitchen</a>        
         </div>
@@ -48,6 +57,8 @@
         <div class="tag">
             <a href="#" class="tag__link" @click="select">Interior</a>        
         </div>
+
+
         
        
        
@@ -59,7 +70,7 @@
 </section>
     <div class="secondblog container">
     <div class="blog__entry"  v-for="entry in filteredEntrys" :key= "entry.id" :entry="entry">
-                <div class="entry__img"  style=" background: url(require ('../assets/images/SetPhoto4.jpg')), lightgray 50% / cover; padding: 228px 196px 20px 20px">
+                <div class="entry__img"  >
                     <div class="entry__tag">
                         <a href="#" class="tag__txt">{{entry.tag}}</a>                       
                     </div>                  
@@ -91,10 +102,15 @@
 //На странице отображается подробное описание статьи, а под ней размещаются остальные статьи. Необходимо, чтобы на выборе Tags происходила сортировка статей по выбранному тегу. Тег можно выбрать только один.
 
 //Задание по работе с макетом направлено на подготовку проекта к итоговой аттестации.
+//https://ru.stackoverflow.com/questions/1235509/%D0%A4%D0%B8%D0%BB%D1%8C%D1%82%D1%80-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-%D0%B8%D0%B7-%D0%BE%D0%B1%D1%8C%D0%B5%D0%BA%D1%82%D0%B0-vuex-%D0%BD%D0%B0-frontend
+
+
     export default {
+
+       
         data() {
         return{
-			entrys:[
+		entrys:[
 				{
 				id: 1,
                 //img: '@/assets/images/Kitchen2.jpg',

@@ -17,14 +17,22 @@ body {
 img {
 	max-width: 100%;
 	display: block;
+    object-fit: cover;
+    
+    
 }
 
 section {   
     background: #FFF;
 }
 
+li {
+    list-style-type: none;
+}
+
 .container {    
-    margin:  auto;
+    max-width: 1950px;
+  margin: 0 auto;
 }
 
 .head {
@@ -227,12 +235,12 @@ letter-spacing: 0.22px;
 
 .bl {
     border-radius: 0  0 0 50px;
-    background: url(@/assets/images/SetPhoto3.jpg), lightgray 50% / cover;
+    background: url(@/assets/images/SetPhoto1.jpg), lightgray 50% / cover;
 }
 
 .br {   
     border-radius: 0  0 50px 0;
-    background: url(@/assets/images/SetPhoto4.jpg), lightgray 50% / cover;
+    background: url(@/assets/images/SetPhoto2.jpg), lightgray 50% / cover;
 }
 
 .set__desc {
@@ -345,6 +353,7 @@ letter-spacing: 0.22px;
     height: 289.267px;
     flex-shrink: 0;
     border-radius: 45px 45px 0px 0px;
+    background: url(@/assets/images/Kitchen2.jpg), lightgray 50% / cover;
     
     margin-bottom: 21px;  
     
@@ -1004,4 +1013,95 @@ font-weight: 400;
     text-align: center;
     width: 150px;
     
+}
+
+.selectBtns {
+    width: 880px;    
+    display: flex;
+    flex-direction: row;
+}
+
+.sets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.selectBtn {
+padding: 26px 66px 26px 66px;
+color: rgb(41, 47, 54);
+font-family: Jost;
+font-size: 18px;
+font-weight: 400;
+line-height: 125%;
+letter-spacing: 2%;
+text-align: center;
+border: 1px solid rgb(205, 162, 116);
+border-radius: 18px;
+background: rgb(255, 255, 255);
+
+}
+
+.selectBtn:hover {
+    color: rgb(255, 255, 255);
+    background: rgb(205, 162, 116);
+}
+
+.project_cards {
+    /*display: grid;
+    grid-template-columns: repeat(2, 585px) ;
+    grid-template-rows: 616px 431px 616px 431px 616px 431px;*/
+    column-count: 2;   
+    width: 1200;
+
+
+    
+   
+}
+
+.newset {
+    display: flex;
+    flex-direction: column;
+    
+    
+  
+   
+}
+
+.newset_img {  
+   
+    
+    margin-bottom: 31px;
+} 
+
+.newset_info_link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.newset_info {
+    display: flex;
+    flex-direction: column;
+}
+
+.newset_title {
+color: rgb(41, 47, 54);
+font-family: DM Serif Display;
+font-size: 25px;
+font-weight: 400;
+line-height: 125%;
+letter-spacing: 2%;
+text-align: left;
+}
+
+.newset_subtitle {
+color: rgb(77, 80, 83);
+font-family: Jost;
+font-size: 22px;
+font-weight: 400;
+line-height: 150%;
+letter-spacing: 1%;
+text-align: left;
 }
