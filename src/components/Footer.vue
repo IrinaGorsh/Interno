@@ -23,9 +23,7 @@
                 <li class="footer__link"><router-link to="/Project">Project</router-link></li>
                 <li class="footer__link"><router-link to="/Blog">Blog</router-link></li>
                 
-                <!--<a href="#" class="footer__link">Home</a>
-                <a href="#" class="footer__link">Project</a>
-                <a href="#" class="footer__link">Blog</a> -->
+              
             </ul>
             <div class="footer__cont">
                 <p class="footer__bold">Contact</p>

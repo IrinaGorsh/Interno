@@ -37,7 +37,7 @@
             <h3 class="heading__title">Articles & News</h3>        
     </div>
 <div class="secondblog container">
-   <!-- <Entry  v-for="entry in paginatedEntrys" :key= "entry.id" :entry="entry" />-->
+   
    <div class="blog__entry" v-for="entry in paginatedEntrys" :key= "entry.id" :entry="entry">
                 <div class="entry__img"  >
                     <div class="entry__tag">
@@ -54,7 +54,7 @@
                             <div class="entry__link"><router-link to="/blogdetails"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none"  class="entry__svg">
         <circle cx="26" cy="26.267" r="26" fill="#F4F0EC"  class="entry__circ"/>
         <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg></router-link><</div>
+      </svg></router-link></div>
                         </div>
                        
                     </div>
@@ -63,20 +63,20 @@
         
             </div>
 </div>
-<div v-if="totalPages > 1">
-    <router-link style="margin-right: 5px;" v-for="pagenumber in totalPages" :key="pagenumber" :to="getPageLink(pagenumber)">{{ pagenumber }}</router-link>
+<div v-if="totalPages > 1" class="pagination container">
+    <router-link class="pag_link" v-for="pagenumber in totalPages" :key="pagenumber" :to="getPageLink(pagenumber)">{{ pagenumber }}</router-link>
 </div>
 </section>
 </template>
 <script>
-//import Entry from '@/components/Entry.vue';
+
 export default {
         data() {
             return {
                 entrys: [
                 {
         id: 1,
-        //img: '@/assets/images/Kitchen2.jpg',
+        
         tag: "Kitchen",
         title:"Let’s Get Solution For Building Construction Work",
         date: '26 December,2022',
@@ -85,7 +85,7 @@ export default {
 
     {
         id: 2,
-        //img: '@/assets/images/Kitchen2.jpg',
+        
         tag: "Living",
         title:"Low Cost Latest Invented Interior Designing Ideas.",
         date: '22 December,2022',
@@ -94,7 +94,7 @@ export default {
 
     {
         id: 3,
-        //img: '@/assets/images/Kitchen2.jpg',
+        
         tag: "Interior",
         title:"Best For Any Office & Business Interior Solution",
         date: '25 December,2022',
@@ -103,7 +103,7 @@ export default {
 
     {
         id: 4,
-        //img: '@/assets/images/Kitchen2.jpg',
+        
         tag: "Kitchen",
         title:"Best For Any Office & Business Interior Solution",
         date: '19 December,2022',
@@ -112,7 +112,7 @@ export default {
 
     {
         id: 5,
-        //img: '@/assets/images/Kitchen2.jpg',
+       
         tag: "Living",
         title:"Best For Any Office & Business Interior Solution",
         date: '18 December,2022',
@@ -121,7 +121,7 @@ export default {
 
     {
         id: 6,
-        //img: '@/assets/images/Kitchen2.jpg',
+       
         tag: "Interior",
         title:"Best For Any Office & Business Interior Solution",
         date: '17 December,2022',
@@ -130,7 +130,7 @@ export default {
 
     {
         id: 7,
-        //img: '@/assets/images/Kitchen2.jpg',
+        
         tag: "Kitchen",
         title:"Best For Any Office & Business Interior Solution",
         date: '15 December,2022',
@@ -139,7 +139,7 @@ export default {
 
     {
         id: 8,
-        //img: '@/assets/images/Kitchen2.jpg',
+        
         tag: "Living",
         title:"Best For Any Office & Business Interior Solution",
         date: '13 December,2022',
@@ -148,7 +148,7 @@ export default {
 
     {
         id: 9,
-        //img: '@/assets/images/Kitchen2.jpg',
+       
         tag: "Kitchen",
         title:"Best For Any Office & Business Interior Solution",
         date: '10 December,2022',
@@ -157,7 +157,7 @@ export default {
 
     {
         id: 10,
-        //img: '@/assets/images/Kitchen2.jpg',
+        
         tag: "Interior",
         title:"Best For Any Office & Business Interior Solution",
         date: '08 December,2022',
@@ -196,7 +196,7 @@ export default {
                            
                
                 
-               //filteredEntrys: []
+              
             }
         },
 
@@ -217,10 +217,7 @@ paginatedEntrys () {
         },
 
         methods: {
-           // showall(e) {
-                //this.filteredEntrys = this.entrys
-               
-           //},
+           
         
            getCurrentPageNumber(){
         const pageNumberParam = parseInt(this.$route.params.pagenumber)
@@ -232,14 +229,6 @@ return `/blog/${pagenumber}`
                
         },
 
-       // components: {
-
-            //Entry
-        //},
-
-      // mounted: function() {
-       // this.showall() 
-       
-    //},
+     
     }
 </script>

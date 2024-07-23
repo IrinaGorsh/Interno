@@ -39,15 +39,7 @@
 <div class="tags__column">
     <h4 class="tags__title">Tags</h4>
     <div class="tags__wrapper">
-        <!--<div class="tag">
-            <a href="#" class="tag__link" @click="select">Kitchen</a>        
-        </div>
-        <div class="tag">
-            <a href="#" class="tag__link" @click="select">Living</a>        
-        </div>
-        <div class="tag">
-            <a href="#" class="tag__link" @click="select">Interior</a>        
-        </div> -->
+       
         <div class="tag">
             <a href="#" class="tag__link" @click="select">Kitchen</a>        
         </div>
@@ -102,7 +94,7 @@
 //На странице отображается подробное описание статьи, а под ней размещаются остальные статьи. Необходимо, чтобы на выборе Tags происходила сортировка статей по выбранному тегу. Тег можно выбрать только один.
 
 //Задание по работе с макетом направлено на подготовку проекта к итоговой аттестации.
-//https://ru.stackoverflow.com/questions/1235509/%D0%A4%D0%B8%D0%BB%D1%8C%D1%82%D1%80-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-%D0%B8%D0%B7-%D0%BE%D0%B1%D1%8C%D0%B5%D0%BA%D1%82%D0%B0-vuex-%D0%BD%D0%B0-frontend
+
 
 
     export default {
@@ -113,7 +105,7 @@
 		entrys:[
 				{
 				id: 1,
-                //img: '@/assets/images/Kitchen2.jpg',
+               
 				tag: "Kitchen",
 				title:"Let’s Get Solution For Building Construction Work",
 				date: '26 December,2022',
@@ -122,7 +114,7 @@
 
 			{
 				id: 2,
-                //img: '@/assets/images/Kitchen2.jpg',
+                
 				tag: "Living",
 				title:"Low Cost Latest Invented Interior Designing Ideas.",
 				date: '22 December,2022',
@@ -131,7 +123,7 @@
 
 			{
 				id: 3,
-                //img: '@/assets/images/Kitchen2.jpg',
+                
 				tag: "Interior",
 				title:"Best For Any Office & Business Interior Solution",
 				date: '25 December,2022',
@@ -140,7 +132,7 @@
 
             {
 				id: 4,
-                //img: '@/assets/images/Kitchen2.jpg',
+                
 				tag: "Interior",
 				title:"Low Cost Latest Invented Interior Designing Ideas",
 				date: '25 December,2022',
@@ -149,7 +141,7 @@
 
             {
 				id: 5,
-                //img: '@/assets/images/Kitchen2.jpg',
+               
 				tag: "Kitchen",
 				title:"Best For Any Office & Business Interior Solution",
 				date: '25 December,2022',
@@ -158,7 +150,7 @@
 
             {
 				id: 6,
-                //img: '@/assets/images/Kitchen2.jpg',
+               
 				tag: "Living",
 				title:"Let’s Get Solution For Building Construction Work",
 				date: '25 December,2022',

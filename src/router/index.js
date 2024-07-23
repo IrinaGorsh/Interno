@@ -4,6 +4,7 @@ import Blog from "@/pages/Blog.vue";
 import Project from "@/pages/Project.vue";
 import BlogDetails from "@/pages/BlogDetails.vue";
 import ProjectDetails from "@/pages/ProjectDetails.vue";
+import NotFound from "@/pages/NotFound.vue";
 
 
 const routes = [
@@ -18,7 +19,7 @@ const routes = [
     },
 
     {
-        path: "/project",
+        path: "/project/:pagenumber?",
         component: Project
     },
 
@@ -30,6 +31,11 @@ const routes = [
     {
         path: "/projectdetails",
         component: ProjectDetails
+    },
+
+    {
+        path: "/:CatchAll(.*)",
+        component: NotFound
     }
 ]
 

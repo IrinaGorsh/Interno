@@ -20,6 +20,9 @@
    <div class="project_cards">
     <Set v-for= "project in filteredProjects" :key="project.id"  :project="project" />
    </div>
+   <div v-if="totalPages > 1" class="pagination container">
+    <router-link class="pag_link" v-for="pagenumber in totalPages" :key="pagenumber" :to="getPageLink(pagenumber)">{{ pagenumber }}</router-link>
+</div>
     </div>
     
    
@@ -33,7 +36,7 @@
 //Создать страницу Project (Домашнее задание 6):
 
 //В блоке categoreis необходимо сделать переключение проектов на ваше усмотрение.
-//https://codesandbox.io/s/compassionate-brown-kpnoi?file=/src/main.js:53-86
+
 
 import Set from '@/components/Set.vue';
     export default {
@@ -48,16 +51,10 @@ import Set from '@/components/Set.vue';
                         imagestyle: {
                             
                             width: '585px',
-                            height: '947px'
-                        }
-                       // headerstyle: {
-                           // color: 'green',
+                            height: '947px',
                             
-                        //},
-
-                //buttonstyle: {
-                  //border: '1px solid blue'
-                //}
+                        }
+                      
                       
                     },
 
@@ -144,31 +141,100 @@ import Set from '@/components/Set.vue';
                             
                         }
                     },
+
+                    {
+                        id: 9,
+                        title: "Minimal Kitchen",                        
+                        image: "Project2.jpg",
+                        tag: 'Kitchen',
+                        imagestyle: {
+                           
+                            width: '585px',
+                            height: '947px'
+                        }
+                    },
+
+                    {
+                        id: 10,
+                        title: "Minimal Living Area",                        
+                        image: "Project1.jpg",
+                        tag: 'Living Area',
+                        imagestyle: {
+                           
+                            width: '585px',
+                            height: '616px'
+                        }
+                    },
                 ],
+
+        itemsPerPage: 6,
 
                
               
                
                 
-               filteredProjects: []
+               filteredProjects: [],
+               links: [
+                {
+                        id:1,
+                        title: "Project",
+                        url: "/project/:pagenumber?"
+                    },
+                    
+                    {
+                        id:2,
+                        title: "Blog Details",
+                        url: "/blogdetails"
+                    },
+
+                   
+
+                    {
+                        id: 3,
+                        title: "Project Details",
+                        url: "/projectdetails"
+                    }
+
+                    
+
+                   
+                ],
             };
+        },
+
+        computed: {
+            totalPages (){
+              
+                return Math.ceil(this.projects.length/this.itemsPerPage)
+            },
+
+paginatedEntrys () {
+    const pagenumber = this.getCurrentPageNumber()
+    const startIndex = (pagenumber - 1) * this.itemsPerPage
+    const endIndex = startIndex + this.itemsPerPage
+    return this.projects.slice(startIndex, endIndex)
+
+}
+
         },
 
         methods: {
             showall(e) {
                 this.filteredProjects = this.projects
-                //this.projects.forEach((obj) => {
-                    
-               
-
-                    
-   // }
-            //)
+              
             },
             select(e) {
       this.filteredProjects = this.projects.filter((obj) => obj.tag === e.target.textContent);
       
     },
+
+    getCurrentPageNumber(){
+        const pageNumberParam = parseInt(this.$route.params.pagenumber)
+        return isNaN(pageNumberParam)||pageNumberParam < 1 ? 1 : pageNumberParam
+    },
+    getPageLink(pagenumber){
+return `/project/${pagenumber}`
+}
 
     
         },

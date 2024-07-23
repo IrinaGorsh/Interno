@@ -17,7 +17,8 @@ body {
 img {
 	max-width: 100%;
 	display: block;
-    object-fit: cover;
+
+   
     
     
 }
@@ -148,6 +149,7 @@ letter-spacing: 0.22px;
     border-radius: 18px;
     background: #292F36;
     box-shadow: 0px 10px 20px  0px rgba(192, 192, 192, 0.35);
+    width: 245px;
 }
 
 .start__btn__txt {
@@ -283,6 +285,10 @@ letter-spacing: 0.22px;
     border: none;
 }
 
+.set:hover {
+    background: #F4F0Ec;
+}
+
 .counter {
     display: flex;
     width: 1082px;
@@ -357,6 +363,7 @@ letter-spacing: 0.22px;
     
     margin-bottom: 21px;  
     
+    
 }
 
 .k1 {
@@ -390,6 +397,7 @@ letter-spacing: 0.22px;
 }
 
 .entry__tag {
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -398,6 +406,8 @@ letter-spacing: 0.22px;
     flex-shrink: 0;
     border-radius: 8px 8px 8px 0px;
     background: #FFF;
+    left: 52px;
+    top: 253px;
     
 }
 
@@ -424,6 +434,7 @@ letter-spacing: 0.22px;
 }
 
 .blog__entry {
+    position: relative;
     display: flex;
     flex-direction: column;
     padding: 21px;
@@ -437,11 +448,11 @@ letter-spacing: 0.22px;
 }
 
 .blog__entry:hover {
-    background: #F4F0EC;;
+    background: #F4F0EC;
 }
 
 .blog__entry:hover  > .entry__sub > .entry__open  > .entry__link__wrapper > .entry__link > .entry__svg > .entry__circ {
-   fill: #FFF
+   fill:rgb(255, 255, 255);
 }
 
 .entry__sub {
@@ -603,6 +614,7 @@ width: 1300px;
 height: 356px;
 margin: auto;
 flex-shrink: 0;
+
 }
 
 .titled {
@@ -653,7 +665,7 @@ text-align: center;
 .secondblog {
     width: 1200px;
     margin-top: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -755,6 +767,7 @@ line-height: 150%; /* 24px */
 letter-spacing: 0.16px;
 text-transform: capitalize;
 }
+
 
 .pagination{
 display: flex;
@@ -1019,12 +1032,14 @@ font-weight: 400;
     width: 880px;    
     display: flex;
     flex-direction: row;
+    margin-bottom: 40px;
 }
 
 .sets {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .selectBtn {
@@ -1053,15 +1068,24 @@ background: rgb(255, 255, 255);
     grid-template-rows: 616px 431px 616px 431px 616px 431px;*/
     column-count: 2;   
     width: 1200;
+    margin-bottom: 60px;
 
 
     
    
 }
 
+.projects_info {
+    margin-top: 200px;
+    margin-bottom: 60px;
+}
+
+
+
 .newset {
     display: flex;
     flex-direction: column;
+    
     
     
   
@@ -1070,7 +1094,7 @@ background: rgb(255, 255, 255);
 
 .newset_img {  
    
-    
+    position: relative;
     margin-bottom: 31px;
 } 
 
@@ -1104,4 +1128,125 @@ font-weight: 400;
 line-height: 150%;
 letter-spacing: 1%;
 text-align: left;
+}
+
+.star {
+   
+position: absolute;
+width: 36px;
+height: 34px;
+left: 544px;
+top: 5px;
+
+
+fill: rgb(255, 169, 40);
+filter: drop-shadow(3px 3px 3px #00000066)
+}
+
+.pag_link {
+    width: 52px;
+    height: 52px;
+    border: 1px solid rgb(205, 162, 116); 
+    border-radius: 50px; 
+    padding: 19px 23px 19px 23px;
+    
+}
+
+.pag_link:hover {
+    background:  rgb(205, 162, 116);
+    border: none;
+}
+
+.proj_det {
+    margin-top: 200px;
+    margin-bottom: 107px;
+}
+
+.proj_details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.proj_details_box {
+    width: 565px;     
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 100px;
+
+}
+
+.proj_details_title {
+    color: rgb(41, 47, 54);
+font-family: DM Serif Display;
+font-size: 50px;
+font-weight: 400;
+line-height: 125%;
+letter-spacing: 2%;
+text-align: left;
+}
+
+.proj_details_text {
+    color: rgb(77, 80, 83);
+font-family: Jost;
+font-size: 22px;
+font-weight: 400;
+line-height: 150%;
+letter-spacing: 1%;
+text-align: left;
+}
+
+.swiper {
+    width: 1201px;
+    height: 780px;
+    border-radius: 70px;
+    background: rgb(196, 196, 196);
+  }
+  
+  .swiper-slide {
+    overflow: hidden;
+  }
+
+  .pnf{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 80px;
+  }
+
+  .error {
+    display: flex;
+    flex-direction: column;
+    width: 569px;
+  }
+
+  .error_title {
+    color: rgb(205, 162, 116);
+font-family: DM Serif Display;
+font-size: 250px;
+font-weight: 400;
+line-height: 125%;
+letter-spacing: 0%;
+text-align: left;
+  }
+
+.error_txt {
+color: rgb(41, 47, 54);
+font-family: DM Serif Display;
+font-size: 35px;
+font-weight: 400;
+line-height: 150%;
+letter-spacing: 1%;
+text-align: left;
+}
+
+.error_img {
+    width: 913px;
+    height: 1042px;
+    border-radius: 0px 0px 0px 353px;
+    background: url(@/assets/images/notfound.jpg), lightgray 50% / cover;
+
 }
