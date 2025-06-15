@@ -11,11 +11,8 @@
 <section class="projects_info">
     <div class="sets container">
         <div class="selectBtns">
-
-<button @click="select" class="selectBtn">Bedroom</button>
-<button @click="select" class="selectBtn">Kitchen</button>
-<button @click="select" class="selectBtn">Bathroom</button>
-<button @click="select" class="selectBtn">Living Area</button>
+         
+ <button  class="selectBtn" v-for= "button in buttons" :key="button.id"  :button="button" @click="select">{{ button.name }}</button>
     </div>
    <div class="project_cards">
     <Set v-for= "project in filteredProjects" :key="project.id"  :project="project" />
@@ -39,22 +36,47 @@
 
 
 import Set from '@/components/Set.vue';
+
     export default {
         data() {
             return {
+                buttons: [
+                     {
+                        id: 1,
+                        name: "Bedroom"
+                     },
+
+                     {
+                        id: 2,
+                        name: "Kitchen"
+                     },
+
+                     {
+                        id: 3,
+                        name: "Bathroom"
+                     },
+
+                     {
+                        id: 4,
+                        name: "Living Area"
+                     }
+
+
+                ],
                 projects: [
                     {
                         id: 1,
                         title: "Minimal Bedroom",
                         image: "Project1.jpg",
                         tag: 'Bedroom',
-                        imagestyle: {
+                    imagestyle: {
                             
                             width: '585px',
-                            height: '947px',
-                            
+                            height: '853px',
+                            background: `url(${require('@/assets/images/ProjectPhoto1.jpeg')})`,
+                           
                         }
-                      
+                          
                       
                     },
 
@@ -63,11 +85,14 @@ import Set from '@/components/Set.vue';
                         title: "Minimal Bathroom",
                         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Bridal_pink_-_morwell_rose_garden.jpg/1024px-Bridal_pink_-_morwell_rose_garden.jpg",
                         tag: 'Bathroom',
-                        imagestyle: {
+                    imagestyle: {
                             
                             width: '585px',
-                            height: '616px'
-                        }
+                            height: '522px',
+                            background: `url(${require('@/assets/images/ProjectPhoto2.jpeg')})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center'
+                        } 
                     },
 
                     {
@@ -75,10 +100,13 @@ import Set from '@/components/Set.vue';
                         title: "Classic Minimal Bedroom",
                         image: "Project1.jpg",
                         tag: 'Bedroom',
-                        imagestyle: {
+                   
+                         imagestyle: {
                             
                             width: '585px',
-                            height: '947px'
+                            height: '853px',
+                            background: `url(${require('@/assets/images/ProjectPhoto1.jpeg')})`,
+                           
                         }
                     },
 
@@ -87,57 +115,75 @@ import Set from '@/components/Set.vue';
                         title: "Modern Bathroom",
                         image: "Project2.jpg",
                         tag: 'Bathroom',
+
                         imagestyle: {
                             
                             width: '585px',
-                            height: '616px'}
+                            height: '522px',
+                            background: `url(${require('@/assets/images/ProjectPhoto2.jpeg')})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center'
+                        }
+                  
                     },
 
                     {
                         id: 5,
-                        title: "Modern Living Area",
-                        image: "Project1.jpg",
-                        tag: 'Living Area',
-                        imagestyle: {
-                           
-                            width: '585px',
-                            height: '616px'
-                        }
-                    },
+                        title: "Modern Bathroom",
+                        image: "Project2.jpg",
+                        tag: 'Bathroom',
 
+                        imagestyle: {
+                            
+                            width: '585px',
+                            height: '522px',
+                            background: `url(${require('@/assets/images/ProjectPhoto2.jpeg')})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center'
+                    },
+                },
                     {
                         id: 6,
-                        title: "Minimal Kitchen",                        
-                        image: "Project2.jpg",
+                         title: "Modern Kitchen",
+                        image: "Project1.jpg",
                         tag: 'Kitchen',
-                        imagestyle: {
-                           
+                     
+                         imagestyle: {
+                            
                             width: '585px',
-                            height: '947px'
+                            height: '853px',
+                            background: `url(${require('@/assets/images/ProjectPhoto1.jpeg')})`,
+                            
                         }
                     },
 
                     {
                         id: 7,
-                        title: "Modern Kitchen",
-                        image: "Project1.jpg",
-                        tag: 'Kitchen',
+                         title: "Classic Living Area",
+                        image: "Project2.jpg",
+                        tag: 'Living Area',
+                     
                         imagestyle: {
                             
                             width: '585px',
-                            height: '616px'
+                            height: '522px',
+                            background: `url(${require('@/assets/images/ProjectPhoto2.jpeg')})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center'
                         }
                     },
 
                     {
                         id: 8,
-                        title: "Classic Living Area",
-                        image: "Project2.jpg",
-                        tag: 'Living Area',
-                        imagestyle: {
+                        title: "Modern Kitchen",
+                        image: "Project1.jpg",
+                        tag: 'Kitchen',
+                     
+                         imagestyle: {
                             
                             width: '585px',
-                            height: '616px'
+                            height: '853px',
+                            background: `url(${require('@/assets/images/ProjectPhoto1.jpeg')})`,
                             
                         }
                     },
@@ -147,10 +193,13 @@ import Set from '@/components/Set.vue';
                         title: "Minimal Kitchen",                        
                         image: "Project2.jpg",
                         tag: 'Kitchen',
-                        imagestyle: {
-                           
+                      
+                         imagestyle: {
+                            
                             width: '585px',
-                            height: '947px'
+                            height: '853px',
+                            background: `url(${require('@/assets/images/ProjectPhoto1.jpeg')})`,
+                            
                         }
                     },
 
@@ -159,15 +208,20 @@ import Set from '@/components/Set.vue';
                         title: "Minimal Living Area",                        
                         image: "Project1.jpg",
                         tag: 'Living Area',
+
                         imagestyle: {
-                           
+                            
                             width: '585px',
-                            height: '616px'
+                            height: '522px',
+                            background: `url(${require('@/assets/images/ProjectPhoto2.jpeg')})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center'
                         }
-                    },
+                       
+                    }, 
                 ],
 
-        itemsPerPage: 6,
+        itemsPerPage: 8,
 
                
               
@@ -205,16 +259,18 @@ import Set from '@/components/Set.vue';
         computed: {
             totalPages (){
               
-                return Math.ceil(this.projects.length/this.itemsPerPage)
+                return Math.ceil(this.filteredProjects.length/this.itemsPerPage)
             },
 
-paginatedEntrys () {
+filteredProjects () {
     const pagenumber = this.getCurrentPageNumber()
     const startIndex = (pagenumber - 1) * this.itemsPerPage
     const endIndex = startIndex + this.itemsPerPage
-    return this.projects.slice(startIndex, endIndex)
+    return this.filteredProjects.slice(startIndex, endIndex)
 
-}
+},
+
+
 
         },
 
@@ -222,7 +278,7 @@ paginatedEntrys () {
             showall(e) {
                 this.filteredProjects = this.projects
               
-            },
+            }, 
             select(e) {
       this.filteredProjects = this.projects.filter((obj) => obj.tag === e.target.textContent);
       
@@ -233,19 +289,20 @@ paginatedEntrys () {
         return isNaN(pageNumberParam)||pageNumberParam < 1 ? 1 : pageNumberParam
     },
     getPageLink(pagenumber){
-return `/project/${pagenumber}`
+return `/project/${pagenumber}` 
 }
 
     
         },
 
         components: {
-
+           
             Set
         },
 
-        mounted: function() {
-        this.showall() 
+       mounted: function() {
+        this.showall()
+        
        
     },
     }

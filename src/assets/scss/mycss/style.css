@@ -168,6 +168,16 @@ letter-spacing: 0.22px;
     
 }
 
+.start__btn:hover  {
+     background: #FFFFFF;
+     
+}
+
+.start__btn:hover  div {
+color:#292F36;
+
+}
+
 .proj {
     margin-bottom: 96px;
 }
@@ -202,6 +212,7 @@ letter-spacing: 0.22px;
 .project {
     width: 1200px;
     margin-top: 93px;
+    margin-bottom: 97px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -211,10 +222,9 @@ letter-spacing: 0.22px;
 .set {
     display: flex;
     width: 525px;    
-    flex-direction: column;
-    gap: 24px;
+    flex-direction: column;    
     flex-shrink: 0;
-}
+} 
 
 .set__img {
     width: 525px;
@@ -225,25 +235,7 @@ letter-spacing: 0.22px;
     
 }
 
-.tl {    
-    border-radius: 50px 0 0 0;
-    background: url(@/assets/images/SetPhoto1.jpg), lightgray 50% / cover;
-}
 
-.tr {
-    border-radius: 0  50px 0 0;
-    background: url(@/assets/images/SetPhoto2.jpg), lightgray 50% / cover;
-}
-
-.bl {
-    border-radius: 0  0 0 50px;
-    background: url(@/assets/images/SetPhoto1.jpg), lightgray 50% / cover;
-}
-
-.br {   
-    border-radius: 0  0 50px 0;
-    background: url(@/assets/images/SetPhoto2.jpg), lightgray 50% / cover;
-}
 
 .set__desc {
     display: flex;
@@ -251,7 +243,16 @@ letter-spacing: 0.22px;
     justify-content: space-between;
     align-items: center;
     width: 525px;
+    padding-top: 24px;
 }
+
+.set__desc:hover {
+     background: #F4F0Ec;
+}
+
+.set__desc:hover .entry__circ{
+     fill: #FFFFFF;
+} 
 
 .set__text {
     width: 217px;
@@ -259,7 +260,7 @@ letter-spacing: 0.22px;
 
 .set__title {
     color: #292F36;
-    font-family: DM Serif     Display;
+    font-family: DM Serif Display;
     font-size: 25px;    
     font-style: normal;
     font-weight: 400;
@@ -285,10 +286,42 @@ letter-spacing: 0.22px;
     border: none;
 }
 
-.set:hover {
-    background: #F4F0Ec;
+.info__background {
+    background: #F4F0EC;
+    padding-top: 150px;
+    padding-bottom: 150px;
 }
 
+.info {
+     display: flex;
+     justify-content: center;
+    align-items: flex-start;
+   
+}
+
+.infobox {
+     display: flex;
+     flex-direction: column;
+    align-items: center;
+    width: 300px;
+    gap: 16px;
+}
+
+.info__figure {
+    font-family: DM Serif Display;
+    font-weight: 400;
+    font-size: 85px;
+    line-height: 125%;
+    color: #CDA274;
+}
+
+.info__content {
+    font-family: Jost;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+    color: #4D5053;
+}
 .counter {
     display: flex;
     width: 1082px;
@@ -451,9 +484,13 @@ letter-spacing: 0.22px;
     background: #F4F0EC;
 }
 
-.blog__entry:hover  > .entry__sub > .entry__open  > .entry__link__wrapper > .entry__link > .entry__svg > .entry__circ {
-   fill:rgb(255, 255, 255);
-}
+/*.blog__entry:hover  > .entry__sub > .entry__open  > .entry__link__wrapper > .entry__link > .entry__circ {
+    fill: #FFFFFF;
+}*/
+
+.blog__entry:hover .entry__circ{
+     fill: #FFFFFF;
+} 
 
 .entry__sub {
     display: flex;
@@ -492,14 +529,14 @@ letter-spacing: 0.22px;
     text-transform: capitalize;
 } 
 
-.entry__link__wrapper {
+/*.entry__link__wrapper {
     width: 52px;
     height: 52px;
     flex-shrink: 0;
     background: #FFF;
     border: none;
     border-radius: 50px;
-}
+} */
 
 .footer {
 display: flex;
@@ -644,10 +681,11 @@ font-size: 50px;
 font-style: normal;
 font-weight: 400;
 line-height: 125%; /* 62.5px */
+text-align: center;
 }
 
 .bannerheading__sub {
-width: 125px;
+/*width: 125px;*/
 color: #4D5053;
 font-family: Jost;
 font-size: 22px;
@@ -790,15 +828,15 @@ margin: auto;
    border-radius: 50px;
 }
 
-.entry__link {
+/*.entry__link {
     color: #292F36;
 font-family: Jost;
 font-size: 16px;
 font-style: normal;
 font-weight: 500;
-line-height: 150%; /* 24px */
+line-height: 150%; 
 text-transform: capitalize;
-}
+} */
 
 .post__details {
     margin-top: 200px;
@@ -1040,7 +1078,7 @@ font-weight: 400;
     flex-direction: column;
     align-items: center;
     
-}
+} 
 
 .selectBtn {
 padding: 26px 66px 26px 66px;
@@ -1063,11 +1101,9 @@ background: rgb(255, 255, 255);
 }
 
 .project_cards {
-    /*display: grid;
-    grid-template-columns: repeat(2, 585px) ;
-    grid-template-rows: 616px 431px 616px 431px 616px 431px;*/
+   
     column-count: 2;   
-    width: 1200;
+    /*width: 1200;*/
     margin-bottom: 60px;
 
 
@@ -1085,6 +1121,7 @@ background: rgb(255, 255, 255);
 .newset {
     display: flex;
     flex-direction: column;
+    margin-bottom: 25px;
     
     
     
