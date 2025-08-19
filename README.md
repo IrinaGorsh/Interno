@@ -1,4 +1,5 @@
-# newprojectvuecli
+# Interno
+A multipage online shop application developed using Vue 3.4.15.
 
 ## Project setup
 ```
