@@ -12,12 +12,12 @@
     <div class="sets container">
         <div class="selectBtns">
          
- <button  class="selectBtn" v-for= "button in buttons" :key="button.id"  :button="button" @click="select">{{ button.name }}</button>
+ <button  class="selectBtn" v-for= "button in buttons" :key="button.id"  :button="button"  @click="select">{{ button.name }}</button>
     </div>
    <div class="project_cards">
     <Set v-for= "project in filteredProjects" :key="project.id"  :project="project" />
    </div>
-   <div v-if="totalPages > 1" class="pagination container">
+   <div v-if="totalPages >  1" class="pagination container">
     <router-link class="pag_link" v-for="pagenumber in totalPages" :key="pagenumber" :to="getPageLink(pagenumber)">{{ pagenumber }}</router-link>
 </div>
     </div>
@@ -219,6 +219,125 @@ import Set from '@/components/Set.vue';
                         }
                        
                     }, 
+
+                    {
+                        id: 11,
+                        title: "Minimal Living Area",                        
+                        image: "Project1.jpg",
+                        tag: 'Living Area',
+
+                        imagestyle: {
+                            
+                            width: '585px',
+                            height: '522px',
+                            background: `url(${require('@/assets/images/ProjectPhoto2.jpeg')})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center'
+                        }
+                       
+                    }, 
+
+                    {
+                        id: 12,
+                        title: "Minimal Living Area",                        
+                        image: "Project1.jpg",
+                        tag: 'Living Area',
+
+                        imagestyle: {
+                            
+                            width: '585px',
+                            height: '522px',
+                            background: `url(${require('@/assets/images/ProjectPhoto2.jpeg')})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center'
+                        }
+                       
+                    }, 
+
+                    {
+                        id: 13,
+                        title: "Minimal Living Area",                        
+                        image: "Project1.jpg",
+                        tag: 'Living Area',
+
+                        imagestyle: {
+                            
+                            width: '585px',
+                            height: '522px',
+                            background: `url(${require('@/assets/images/ProjectPhoto2.jpeg')})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center'
+                        }
+                       
+                    }, 
+
+                    {
+                        id: 14,
+                        title: "Minimal Living Area",                        
+                        image: "Project1.jpg",
+                        tag: 'Living Area',
+
+                        imagestyle: {
+                            
+                            width: '585px',
+                            height: '522px',
+                            background: `url(${require('@/assets/images/ProjectPhoto2.jpeg')})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center'
+                        }
+                       
+                    }, 
+
+                    {
+                        id: 15,
+                        title: "Minimal Living Area",                        
+                        image: "Project1.jpg",
+                        tag: 'Living Area',
+
+                        imagestyle: {
+                            
+                            width: '585px',
+                            height: '522px',
+                            background: `url(${require('@/assets/images/ProjectPhoto2.jpeg')})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center'
+                        }
+                       
+                    }, 
+
+                    {
+                        id: 16,
+                        title: "Minimal Living Area",                        
+                        image: "Project1.jpg",
+                        tag: 'Living Area',
+
+                        imagestyle: {
+                            
+                            width: '585px',
+                            height: '522px',
+                            background: `url(${require('@/assets/images/ProjectPhoto2.jpeg')})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center'
+                        }
+                       
+                    }, 
+
+                    {
+                        id: 17,
+                        title: "Minimal Living Area",                        
+                        image: "Project1.jpg",
+                        tag: 'Living Area',
+
+                        imagestyle: {
+                            
+                            width: '585px',
+                            height: '522px',
+                            background: `url(${require('@/assets/images/ProjectPhoto2.jpeg')})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center'
+                        }
+                       
+                    }, 
                 ],
 
         itemsPerPage: 8,
@@ -253,20 +372,22 @@ import Set from '@/components/Set.vue';
 
                    
                 ],
+            
             };
         },
 
         computed: {
             totalPages (){
-              
                 return Math.ceil(this.filteredProjects.length/this.itemsPerPage)
+
             },
 
 filteredProjects () {
     const pagenumber = this.getCurrentPageNumber()
+    console.log(pagenumber)
     const startIndex = (pagenumber - 1) * this.itemsPerPage
     const endIndex = startIndex + this.itemsPerPage
-    return this.filteredProjects.slice(startIndex, endIndex)
+       return this.filteredProjects.slice(startIndex, endIndex)
 
 },
 
@@ -279,18 +400,26 @@ filteredProjects () {
                 this.filteredProjects = this.projects
               
             }, 
-            select(e) {
-      this.filteredProjects = this.projects.filter((obj) => obj.tag === e.target.textContent);
-      
-    },
+           
 
     getCurrentPageNumber(){
         const pageNumberParam = parseInt(this.$route.params.pagenumber)
+
+               
         return isNaN(pageNumberParam)||pageNumberParam < 1 ? 1 : pageNumberParam
     },
     getPageLink(pagenumber){
+
 return `/project/${pagenumber}` 
-}
+},
+
+ select(e) {
+      this.filteredProjects = this.projects.filter((obj) => obj.tag === e.target.textContent);
+      this.$router.push('/project/1') 
+     
+            
+      
+    }
 
     
         },

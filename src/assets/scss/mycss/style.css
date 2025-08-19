@@ -31,6 +31,10 @@ li {
     list-style-type: none;
 }
 
+
+
+
+
 .container {    
     max-width: 1950px;
   margin: 0 auto;
@@ -253,6 +257,7 @@ color:#292F36;
 .set__desc:hover .entry__circ{
      fill: #FFFFFF;
 } 
+
 
 .set__text {
     width: 217px;
@@ -492,6 +497,18 @@ color:#292F36;
      fill: #FFFFFF;
 } 
 
+.post__wrapper:hover {
+    background: #F4F0EC;
+}
+
+.post__wrapper:hover .entry__circ{
+     fill: #FFFFFF;
+} 
+
+
+
+
+
 .entry__sub {
     display: flex;
     width: 340px;
@@ -717,7 +734,7 @@ text-align: center;
 
 .post {
     display: flex;
-    width: 1201px;
+    width: 1201px; 
     flex-direction: column;
     align-items: flex-start;
     gap: 27px;
@@ -736,7 +753,7 @@ letter-spacing: 1px;
 
 .post__wrapper {
 display: flex;
-width: 1201px;
+width: 1201px; 
 padding: 22px;
 flex-direction: row;
 justify-content: center;
@@ -748,8 +765,8 @@ box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
 }
 
 .post__img {
-    width: 569px;
-    height: 478px;
+    width: 569px; 
+    height: 478px; 
     flex-shrink: 0;
     background: url(@/assets/images/Kitchen2.jpg), lightgray 50% / cover;
     border-radius: 62px;
@@ -757,7 +774,7 @@ box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
 
 .post__txt {
     display: flex;
-    width: 489px;
+    width: 489px; 
     flex-direction: column;
     align-items: flex-start;
     flex-shrink: 0;
@@ -776,6 +793,21 @@ letter-spacing: 0.5px;
 }
 
 .post__content {
+    display: flex;
+    flex-direction: column; 
+    width: 469px;
+    margin-bottom: 41px;
+    color: #4D5053;
+font-family: Jost;
+font-size: 22px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 33px */
+letter-spacing: 0.22px;
+}
+
+.latestpost__content {
+    
     width: 469px;
     margin-bottom: 41px;
     color: #4D5053;
@@ -1035,6 +1067,14 @@ letter-spacing: 0.36px;
     color: #FFF;
 }
 
+.tag:focus {
+    background: #292F36
+}
+
+.tag:focus > .tag__link {
+    color: #FFF;
+}
+
 .product__details {
     width: 200px;
     height: 500px;
@@ -1100,10 +1140,17 @@ background: rgb(255, 255, 255);
     background: rgb(205, 162, 116);
 }
 
+.selectBtn:focus {
+    color: rgb(255, 255, 255);
+    background: rgb(205, 162, 116);
+}
+
 .project_cards {
+
+    
    
     column-count: 2;   
-    /*width: 1200;*/
+    width: 1200;
     margin-bottom: 60px;
 
 
@@ -1121,6 +1168,7 @@ background: rgb(255, 255, 255);
 .newset {
     display: flex;
     flex-direction: column;
+    break-inside: avoid-column;
     margin-bottom: 25px;
     
     
@@ -1128,6 +1176,16 @@ background: rgb(255, 255, 255);
   
    
 }
+
+.newset:hover {
+     background: #F4F0Ec;
+}
+
+.newset:hover .entry__circ {
+    fill: #FFFFFF;
+}
+     
+
 
 .newset_img {  
    
@@ -1190,6 +1248,11 @@ filter: drop-shadow(3px 3px 3px #00000066)
 }
 
 .pag_link:hover {
+    background:  rgb(205, 162, 116);
+    border: none;
+}
+
+.pag_link:focus {
     background:  rgb(205, 162, 116);
     border: none;
 }
