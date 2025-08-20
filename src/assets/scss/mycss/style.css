@@ -1060,7 +1060,7 @@ letter-spacing: 0.36px;
 }
 
 .tag:hover {
-    background: #292F36
+    background: #292F36;
 }
 
 .tag:hover > .tag__link {
@@ -1068,8 +1068,8 @@ letter-spacing: 0.36px;
 }
 
 .tag:focus {
-    background: #292F36
-}
+   background: #292F36;
+} 
 
 .tag:focus > .tag__link {
     color: #FFF;

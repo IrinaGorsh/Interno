@@ -1,6 +1,6 @@
 <template>
-    <div class="tag">
-            <a href="#" class="tag__link" >{{ tag.name }}</a>        
+    <div class="tag" tabindex="0">
+            <a href="#" class="tag__link">{{ tag.name }}</a>        
         </div>
 </template>
 <script>
